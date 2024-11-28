@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nav Bar</title>
+    <title>Tennis Cards</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -16,17 +16,50 @@
             <a href="#"><img src="https://www.tennis.se/wp-content/uploads/2019/02/SvTF-logotyp-liggande-stor.png"
                     alt="Tennis Logo"></a>
         </div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <i class="fas fa-bars"></i>
+        </label>
+
         <ul class="nav-links">
-            <li><a href="#">Vår verksamhet <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="#">Vår Verksamhet <i class="fas fa-chevron-down"></i></a></li>
             <li><a href="#">Spela & Tävla <i class="fas fa-chevron-down"></i></a></li>
             <li><a href="#">Följa <i class="fas fa-chevron-down"></i></a></li>
             <li><a href="#">Play <i class="fas fa-chevron-down"></i></a></li>
         </ul>
+
         <div class="search-icon">
             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
     </nav>
 
+
+    <div class="card-container">
+
+        <div class="card">
+            <img src="https://www.tennis.se/wp-content/uploads/2019/04/IKON-HJARTA.png" alt="Heart Icon"
+                class="card-icon">
+            <h2>Stöttande tennisföräldrar</h2>
+            <p>Är du förälder till ett tennisspelande barn? Var med på vår kostnadsfria digitala information tisdag 3/12
+                kl 18.30.</p>
+        </div>
+
+
+        <div class="card">
+            <img src="https://www.tennis.se/wp-content/uploads/2019/06/ikon-Lottning.png" alt="Lottning Icon"
+                class="card-icon">
+            <h2>Tennis Europe</h2>
+            <p>Se lottningar för Tennis Europe-tävlingen Norrköping Elite Hotels Junior Open.</p>
+        </div>
+
+
+        <div class="card">
+            <img src="https://www.tennis.se/wp-content/uploads/2019/06/ikon-Bok.png" alt="Book Icon" class="card-icon">
+            <h2>Nyhetsbrev</h2>
+            <p>Vill du prenumerera på vårt nyhetsbrev? Klicka här!</p>
+        </div>
+    </div>
 </body>
 
 </html>

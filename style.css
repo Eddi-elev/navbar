@@ -6,7 +6,10 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
+
 
 nav.main-nav {
     display: flex;
@@ -27,29 +30,15 @@ nav.main-nav {
     gap: 30px;
 }
 
-.nav-links li {
-    position: relative;
-}
-
 .nav-links li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     transition: color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li a i {
-    margin-left: 8px;
 }
 
 .nav-links li a:hover {
     color: #f90;
-}
-
-.search-icon {
-    margin-left: 30px;
 }
 
 .search-icon a {
@@ -60,4 +49,55 @@ nav.main-nav {
 
 .search-icon a:hover {
     color: #f90;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #4c3be1;
+}
+
+.card {
+    background: #0b034f;
+    border-radius: 8px;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    background-color: #2262d1;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
