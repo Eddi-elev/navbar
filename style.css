@@ -51,13 +51,6 @@ nav.main-nav {
     color: #f90;
 }
 
-.hamburger {
-    display: none;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-}
-
 
 .card-container {
     display: flex;
@@ -79,25 +72,378 @@ nav.main-nav {
     position: relative;
 }
 
-.card h2 {
+
+.image-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.image-card img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.image-card-text {
+    flex: 1;
+    text-align: left;
+}
+
+.image-card-text h2 {
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.card p {
+.image-card-text p {
     font-size: 1rem;
-    margin-top: 10px;
 }
 
-.card img {
-    width: 60px;
-    height: 60px;
-    background-color: #2262d1;
-    border-radius: 50%;
-    padding: 10px;
+.grid-info {
+    padding: 6rem 2rem;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: 13rem 13rem;
+    gap: 1, 5 rem;
+    grid-template-areas:
+        "a a b"
+        "a a c";
+}
+
+.grid-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-video {
+    grid-area: a;
+    position: relative;
+}
+
+.grid-card1 {
+    grid-area: b;
+    background-image: url(Julgran.webp);
+    width: 100%;
+    background-size: cover;
+}
+
+.grid-card2 {
+    grid-area: c;
+    background-image: url(Juladecoration.webp);
+    width: 100%;
+    background-size: cover;
+}
+
+.grid-card1,
+.grid-card2 {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.grid-card1 a,
+.grid-card2 a {
+    margin: 1.5rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+    padding: 0.5rem 1rem;
+    color: #262626;
+    border-radius: 1.5rem;
+}
+
+.video-btn {
     position: absolute;
-    top: -2rem;
+    bottom: 1.5rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
     left: 50%;
     transform: translateX(-50%);
 
+}
+
+.video-btn a:not(.paus-btn) {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+    padding: 0.5rem 1rem;
+    color: #262626;
+    border-radius: 1.5rem;
+}
+
+.paus-btn {
+    width: 3rem;
+    height: 3rem;
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    align-items: center;
+
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #f90;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #f90;
+}
+
+.footer-section.social a {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #f90;
+    transform: scale(1.1);
+}
+
+.footer-section.contact p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    color: #333;
+
+    transition: color 0.3s;
+    margin-left: auto;
+
+}
+
+.hamburger:hover {
+    color: #f90;
+
+}
+
+#menu-toggle {
+    display: none;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    position: static;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f90;
+
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        z-index: 1000;
+    }
+
+
+    #menu-toggle:checked+.hamburger+.nav-links {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: flex;
+
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 20px;
+
+    border-bottom: 4px solid #3a3aff;
+
+    background-color: #fff;
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo img {
+    height: 40px;
+
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+
+    color: #000;
+
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #3a3aff;
+    /* Hover effect with blue color */
+}
+
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-icon:hover {
+    color: #3a3aff;
+}
+
+
+.hamburger {
+    display: none;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+
+    }
+
+    .hamburger {
+        display: block;
+
+    }
+
+
+    .nav.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 }
